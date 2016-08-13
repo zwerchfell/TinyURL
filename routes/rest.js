@@ -11,9 +11,7 @@ var jsonParser = bodyParser.json();
 router.post('/urls', jsonParser, function(req, res) {
     var longUrl = req.body.longUrl;
     //TODO
-})
-
-
+});
 
 
 module.exports = router;
