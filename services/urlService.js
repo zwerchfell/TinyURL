@@ -31,11 +31,11 @@ var getShortUrl = function(longUrl, longToShortHash, shortToLongHash) {
     }
 };
 
-var generateShortUrl = function (longToShortHash) {
-    return Object.keys(longToShortHash).length;
-};
+// var generateShortUrl = function (longToShortHash) {
+//     return Object.keys(longToShortHash).length;
+// };
 
-var generateShortUrlV2 = function(longToShortHash) {
+var generateShortUrl = function(longToShortHash) {
     return convertTo62(Object.keys(longToShortHash).length);
 };
 
