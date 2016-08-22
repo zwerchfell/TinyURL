@@ -1,8 +1,11 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-md-offset-3">
         <h4>Enter Your Loooooooooooooong URL</h4>
-        <form class="form-group">
-
+        <form ng-submit="submit()">
+            <div class="form-group">
+                <input class="form-control" type="text" ng-model="longUrl"/>
+            </div>
+            <input type="submit" value="Get Your Short URL" class="btn btn-primary"/>
         </form>
     </div>
 </div>

@@ -1,5 +1,4 @@
 var encode = [];
-var decode = {};
 
 var genCharArray = function (charA, charZ) {
     var arr = [], i = charA.charCodeAt(0), j = charZ.charCodeAt(0);
@@ -13,9 +12,6 @@ encode = encode.concat(genCharArray('a', 'z'));
 encode = encode.concat(genCharArray('A', 'Z'));
 encode = encode.concat(genCharArray('0', '9'));
 
-for (var i = 0; i < encode.length; i++) {
-    decode[encode[i]] = i;
-}
 
 var getShortUrl = function(longUrl, longToShortHash, shortToLongHash) {
     if (longUrl.indexOf('http') === -1) {
@@ -31,9 +27,6 @@ var getShortUrl = function(longUrl, longToShortHash, shortToLongHash) {
     }
 };
 
-// var generateShortUrl = function (longToShortHash) {
-//     return Object.keys(longToShortHash).length;
-// };
 
 var generateShortUrl = function(longToShortHash) {
     return convertTo62(Object.keys(longToShortHash).length);

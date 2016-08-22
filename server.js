@@ -2,12 +2,13 @@ var express = require('express');
 var app = express();
 var restRouter = require('./routes/rest');
 var redirectRouter = require('./routes/redirect');
-var index = require('./routes/index');
+var indexRouter = require('./routes/index');
 
 app.longToShortHash = {};
 app.shortToLongHash = {};
 
-app.use('/', index);
+app.use('/public', express.static(__dirname + "/public"))
+app.use('/', indexRouter);
 app.use('/api/v1', restRouter);
 app.use('/:shortUrl', redirectRouter);
 
