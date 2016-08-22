@@ -3,6 +3,7 @@ var app = express();
 var restRouter = require('./routes/rest');
 var redirectRouter = require('./routes/redirect');
 var indexRouter = require('./routes/index');
+var mongoose =
 
 app.longToShortHash = {};
 app.shortToLongHash = {};
